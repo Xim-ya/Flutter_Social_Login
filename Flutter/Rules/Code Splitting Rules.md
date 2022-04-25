@@ -1,4 +1,4 @@
-## Code Splitting Rules (Refactoring)
+## Code Splitting Rules (Refactoring) / 작성 중
 HTML & CSS & JS를 공부하다가 React를 처음 개발했을 때 개인적으로 가장 맘에 들었던 부분은 페이지 내 View들을 별도의 소스파일로 나누어 `Component` 단위로 관리 할 수 있다는 점이었습니다. <br>
 <div align="center">
 <img width="248" alt="folder" src="https://user-images.githubusercontent.com/75591730/165092811-14c91e1a-2955-4615-a75f-e769033e1e05.png">
