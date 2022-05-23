@@ -1,3 +1,7 @@
+import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
+import 'package:social/login/kakao_login.dart';
+import 'package:social/viewModel/login_view_model.dart';
+
 import '../utils/index.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -5,6 +9,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final loginVM = LoginViewModel(KakaoLogin());
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -18,7 +23,9 @@ class LoginScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  loginVM.login();
+                },
                 child: Container(
                   height: 54,
                   width: double.infinity,
@@ -45,6 +52,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              TextButton(
+                  onPressed: () async {
+                    loginVM.logout();
+                  },
+                  child: Text("LogOut"))
             ],
           ),
         ),

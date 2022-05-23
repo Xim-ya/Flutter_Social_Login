@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import KakaoSDKCommon
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -9,5 +10,6 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    KakaoSDK.initSDK(appKey: "0b4be9cbe73eb463c4d63fe9099b1f27")
   }
 }
